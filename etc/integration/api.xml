@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
-<integrations>
-    <integration name="SureBright Product Protection">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Integration:etc/integration/api.xsd">
+    <integration>
+        <name>SureBright Product Protection</name>
+        <email>support@surebright.com</email>
+        <endpoint_url>http://34.70.144.229/site-platform/api/platform/magento/oauth/initialize</endpoint_url>
+        <identity_link_url>https://merchant.surebright.com/store/login</identity_link_url>
         <resources>
             <!-- Backend Access -->
             <resource name="Magento_Backend::admin"/>
@@ -34,4 +38,4 @@
             <resource name="Surebright_Integration::manage"/>
         </resources>
     </integration>
-</integrations>
+</config>
