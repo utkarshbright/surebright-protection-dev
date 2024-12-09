@@ -4,7 +4,6 @@ namespace Surebright\Integration\Api;
 
 use Surebright\Integration\Api\ApiResponse;
 use Magento\Framework\Exception\NoSuchEntityException;
-use Surebright\Integration\Api\Data\SBOauthClientInterface;
 
 interface SBOAuthClientInterface
 {
