@@ -21,6 +21,7 @@
             <resource name="Magento_Catalog::categories"/>
             <resource name="Magento_Catalog::attributes_attributes"/>
             <resource name="Magento_Catalog::update_attributes"/>
+            <resource name="Magento_Catalog::sets"/>
  
             <!-- Cart and Quote Access -->
             <resource name="Magento_Quote::quote"/>
