@@ -20,6 +20,7 @@
             <resource name="Magento_Catalog::products"/>
             <resource name="Magento_Catalog::categories"/>
             <resource name="Magento_Catalog::attributes_attributes"/>
+            <resource name="Magento_Catalog::update_attributes"/>
  
             <!-- Cart and Quote Access -->
             <resource name="Magento_Quote::quote"/>
