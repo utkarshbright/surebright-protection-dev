@@ -6,7 +6,7 @@ use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Integration\Model\ConfigBasedIntegrationManager;
 use Magento\Framework\Setup\InstallDataInterface;
 
-class SureBrightInstaller implements InstallDataInterface{
+class InstallData implements InstallDataInterface{
     /**
      * @var ConfigBasedIntegrationManager
      */
