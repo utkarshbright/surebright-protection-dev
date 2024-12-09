@@ -8,7 +8,7 @@ use Magento\Framework\Setup\InstallDataInterface;
 
 use Psr\Log\LoggerInterface;
 
-class InstallData implements InstallDataInterface{
+class SurebrightInstaller implements InstallDataInterface{
     /**
      * @var ConfigBasedIntegrationManager
      */
