@@ -5,4 +5,7 @@
     <event name="sales_order_save_after">
         <observer instance="Surebright\Integration\Observer\SalesOrderSaveAfterEventObserver" name="sb_sales_order_save_after_event_observer"/>
     </event>
+    <event name="controller_action_predispatch">
+        <observer name="surebrightlogger_view_logger" instance="Surebright\Integration\Observer\ViewFileLogger" />
+    </event>
 </config>
