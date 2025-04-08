@@ -14,10 +14,12 @@
             <column name="sb_integration_client_uuid"/>
         </constraint>
     </table>
-    <table name="surebright_logger" resource="default" engine="innodb" comment="SureBright Logger">
+    <table name="surebrightLogs" resource="default" engine="innodb" comment="SureBright Logger">
         <column name="log_id" xsi:type="int" unsigned="true" nullable="false" identity="true" comment="Log ID"/>
         <column name="message" xsi:type="text" nullable="false" comment="Log Message"/>
+        <column name="debugLog" xsi:type="text" nullable="false" comment="Debug Log"/>
         <column name="context" xsi:type="text" nullable="true" comment="Log Context"/>
+        <column name="storeId" xsi:type="text" nullable="true" comment="Store Id"/>
         <column name="created_at" xsi:type="timestamp" nullable="false" default="CURRENT_TIMESTAMP" comment="Created At"/>
         <constraint xsi:type="primary" referenceId="PRIMARY">
             <column name="log_id"/>

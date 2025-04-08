@@ -27,11 +27,15 @@ class InstallData implements InstallDataInterface{
      * {@inheritdoc}
      */
 
-    public function install(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
-    {
-        $logger = $this->objectManager->create(SureBrightLogger::class);
-        $logger->logInstallationStep('Module Installation', 'Started');
-        $this->integrationManager->processIntegrationConfig(['SureBright Product Protection']);
-        $logger->logInstallationStep('Module Installation', 'Completed');
-    }
+     public function install(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
+     {
+         try{
+             $this->sbLogger = \Magento\Framework\App\ObjectManager::getInstance()->create(SureBrightLogger::class);
+             $this->sbLogger->logInstallationStep('installData.php', 'Initiating SureBright Product Protection Integration',null,"install");
+             $this->integrationManager->processIntegrationConfig(['SureBright Product Protection']);
+             $this->sbLogger->logInstallationStep('installData.php', 'SureBright Product Protection Integration Completed',null,"install");
+         }catch(\Exception $e){
+             $this->sbLogger->logInstallationStep('installData.php', 'SureBright Product Protection Integration Failed', ["errorMessage" => $e->getMessage()], "install");
+         }
+     }
 }

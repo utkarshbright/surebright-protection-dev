@@ -7,6 +7,6 @@ class SureBrightLogger extends AbstractDb
 {
     protected function _construct()
     {
-        $this->_init('surebrightLogs', 'sb_integration_client_uuid');
+        $this->_init('surebrightLogs', 'log_id');
     }
 }

@@ -18,4 +18,16 @@
             <resource ref="Magento_Catalog::products"/>
         </resources>
     </route>
+    <route url="/V1/surebright/log" method="GET">
+        <service class="Surebright\Integration\Api\SureBrightLoggerInterface" method="getLogs"/>
+        <resources>
+             <resource ref="Surebright_Integration::manage"/>
+        </resources>
+    </route>
+    <route url="/V1/surebright/log/toggle" method="GET">
+        <service class="Surebright\Integration\Api\SBOAuthClientInterface" method="toggleLogger"/>
+        <resources>
+             <resource ref="Surebright_Integration::manage"/>
+        </resources>
+    </route>
 </routes>
