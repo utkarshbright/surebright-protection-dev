@@ -11,7 +11,7 @@ use Psr\Log\LoggerInterface;
 class SBEventsDispatchService
 {
     public const SB_SVIX_BASE_URL = "https://api.us.svix.com/api/v1/app/";
-    public const SB_PARTNER_SERVICE_BASE_URL = "https://api2.surebright.com";
+    public const SB_PARTNER_SERVICE_BASE_URL = "https://nice-glowworm-blessed.ngrok-free.app";
     private Curl $curl;
     private SerializerInterface $serializer;
     private LoggerInterface $logger;
